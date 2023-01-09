@@ -1,4 +1,4 @@
-# angular-crasecourse
+# angular-crashcourse
 
 - Youtube: [Angular Crash Course](https://youtu.be/3dHNOWTI7H8)
 - Docs: https://angular.io/docs
@@ -37,4 +37,6 @@ Then go to localhost:4200
 ```bash
 ng generate component components/header
 ng generate component components/button
+ng generate component components/tasks
+ng generate component components/task-item
 ```
