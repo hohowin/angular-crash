@@ -40,3 +40,11 @@ ng generate component components/button
 ng generate component components/tasks
 ng generate component components/task-item
 ```
+
+### Font Awesome
+
+- https://github.com/FortAwesome/angular-fontawesome
+
+```bash
+ng add @fortawesome/angular-fontawesome
+```
