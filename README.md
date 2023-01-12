@@ -39,6 +39,8 @@ ng generate component components/header
 ng generate component components/button
 ng generate component components/tasks
 ng generate component components/task-item
+
+ng generate service services/task
 ```
 
 ### Font Awesome
