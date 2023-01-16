@@ -41,6 +41,12 @@ ng generate component components/tasks
 ng generate component components/task-item
 
 ng generate service services/task
+
+# Local Server (not for production)
+npm install json-server
+# In Package Script add
+# "server": "json-server --watch db.json"
+# After started the server, can try http://localhost:5000/tasks
 ```
 
 ### Font Awesome
