@@ -1,8 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Task } from '../Task';
 // import { TASKS } from '../mock-tasks';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  }),
+};
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +26,10 @@ export class TaskService {
   deleteTask(task: Task): Observable<Task> {
     const url = `${this.backendUrl}/${task.id}`;
     return this.http.delete<Task>(url);
+  }
+
+  updateTaskReminder(task: Task): Observable<Task> {
+    const url = `${this.backendUrl}/${task.id}`;
+    return this.http.put<Task>(url, task, httpOptions);
   }
 }

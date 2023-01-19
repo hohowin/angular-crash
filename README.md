@@ -23,10 +23,18 @@ ng new angular-crash
 
 ## Dev Server
 
+### Angular Dev Server
+
 ```bash
 yarn start
 ```
 Then go to localhost:4200
+
+### Json Dev Server
+
+```bash
+yarn server
+```
 
 ---
 
@@ -56,3 +64,11 @@ npm install json-server
 ```bash
 ng add @fortawesome/angular-fontawesome
 ```
+
+---
+
+## Try it out
+
+Try:
+- delete task
+- toggle task
