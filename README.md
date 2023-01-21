@@ -47,6 +47,7 @@ ng generate component components/header
 ng generate component components/button
 ng generate component components/tasks
 ng generate component components/task-item
+ng generate component components/add-task
 
 ng generate service services/task
 
@@ -64,6 +65,24 @@ npm install json-server
 ```bash
 ng add @fortawesome/angular-fontawesome
 ```
+
+### Add Modules
+
+Add HttpClientModule and FormsModule. E.g: In `app.module.ts` add following:
+
+```javascript
+import { FormsModule } from '@angular/forms';
+
+ imports: [
+    :
+    :
+    FormsModule,
+  ],
+```
+
+### Input & Output
+
+`[]` are for input; `()` are for output; `[()]` are for bi-directional data binding.
 
 ---
 
