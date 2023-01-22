@@ -50,6 +50,7 @@ ng generate component components/task-item
 ng generate component components/add-task
 
 ng generate service services/task
+ng generate service services/ui
 
 # Local Server (not for production)
 npm install json-server
@@ -91,3 +92,4 @@ import { FormsModule } from '@angular/forms';
 Try:
 - delete task
 - toggle task
+- add task
