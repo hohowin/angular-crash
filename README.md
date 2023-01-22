@@ -85,6 +85,28 @@ import { FormsModule } from '@angular/forms';
 
 `[]` are for input; `()` are for output; `[()]` are for bi-directional data binding.
 
+### Route
+
+Add `RouterModule` and `Routes` in app.module.ts
+
+```javascript
+import { RouterModule, Routes } from '@angular/router';
+:
+:
+const appRoutes: Routes = [
+  {path: '', component: TasksComponent },
+  {path: 'about', component: AboutComponent },
+  {path: 'footer', component: FooterComponent }
+];
+:
+:
+RouterModule.forRoot(appRoutes, {enableTracing: true}),
+```
+
+In `app.component.html`, add `<router-outlet></router-outlet>` instead of `<app-tasks></app-tasks>`
+
+In `about.component.html`, add `<a routerLink="/">Go Back</a>`
+
 ---
 
 ## Try it out
