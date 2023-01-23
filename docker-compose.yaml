@@ -1,0 +1,28 @@
+---
+version: '2'
+
+networks:
+  mynet:
+
+services:
+
+  json-server:
+    container_name: json-server
+    image: vimagick/json-server
+    command: -H 0.0.0.0 -p 5000 -w db.json
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/data
+    restart: unless-stopped
+    networks:
+      - mynet
+
+  angular-crash:
+    container_name: angular-nginx
+    image: angular-crash:0.1
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    networks:
+      - mynet

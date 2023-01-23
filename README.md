@@ -119,6 +119,22 @@ In `about.component.html`, add `<a routerLink="/">Go Back</a>`
 
 ---
 
+## Production
+
+### Build Images
+
+```bash
+docker build -t angular-crash:0.1 .
+```
+
+### Start Server
+
+```bash
+docker-compose up -d
+```
+
+---
+
 ## Try it out
 
 Try:
