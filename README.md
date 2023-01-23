@@ -107,6 +107,16 @@ In `app.component.html`, add `<router-outlet></router-outlet>` instead of `<app-
 
 In `about.component.html`, add `<a routerLink="/">Go Back</a>`
 
+### Environment Variables
+
+1\. Create environment files under src
+
+2\. In `task.service.ts`, use `environment.domain` instead.
+
+3\. In `angular.json`, update the `configurations` and `serve` section correspondingly.
+
+4\. Update `package.json` scripts.
+
 ---
 
 ## Try it out

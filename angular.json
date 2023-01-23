@@ -31,6 +31,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -44,6 +50,14 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "uat": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.uat.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -61,6 +75,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-crash:build:production"
+            },
+            "uat": {
+              "browserTarget": "angular-crash:build:uat"
             },
             "development": {
               "browserTarget": "angular-crash:build:development"
