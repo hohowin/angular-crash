@@ -1,6 +1,7 @@
 # angular-crashcourse
 
 - Youtube: [Angular Crash Course](https://youtu.be/3dHNOWTI7H8)
+- Youtube: [Angular application in Docker - Traversy Media Angular Crash Course into Docker Environment](https://youtu.be/_63tyWG7wy0)
 - Docs: https://angular.io/docs
 
 ---
@@ -116,6 +117,20 @@ In `about.component.html`, add `<a routerLink="/">Go Back</a>`
 3\. In `angular.json`, update the `configurations` and `serve` section correspondingly.
 
 4\. Update `package.json` scripts.
+
+### Dev Docker
+
+For frontend:
+
+```bash
+docker run --rm -p 4200:4200 $(docker build -q -f Dockerfile.dev .)
+```
+
+For backend, go to `json-server` dir:
+
+```bash
+docker run --rm -p 5000:5000 $(docker build -q .)
+```
 
 ---
 
