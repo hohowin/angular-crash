@@ -132,6 +132,14 @@ For backend, go to `json-server` dir:
 docker run --rm -p 5000:5000 $(docker build -q .)
 ```
 
+OR
+
+```bash
+docker-compose up -d
+```
+
+And then go to http://localhost:4200
+
 ---
 
 ## Production
