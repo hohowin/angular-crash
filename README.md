@@ -144,16 +144,20 @@ And then go to http://localhost:4200
 
 ## Production
 
-### Build Images
+### Nginx
 
-```bash
-docker build -t angular-crash:0.1 .
+In `nginx.conf`, the following block redirects all `/tasks` traffic to `http://json-backend:5000`
+
+```
+ location /tasks {
+   proxy_pass http://json-backend:5000;
+ }
 ```
 
 ### Start Server
 
 ```bash
-docker-compose up -d
+docker-compose -f docker-compose-prod.yaml up -d --build 
 ```
 
 ---
